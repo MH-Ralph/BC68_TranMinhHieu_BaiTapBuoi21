@@ -18,13 +18,23 @@ Validator({
     Validator.isRequired("#email"),
     Validator.isEmail("#email"),
     Validator.isRequired("#luongCB"),
-    Validator.isNumber("#luongCB", 1000000, 20000000),
+    Validator.isNumber(
+      "#luongCB",
+      1000000,
+      20000000,
+      "Vui lòng nhập lương trong khoảng từ 1 triệu đến 20 triệu"
+    ),
     Validator.isRequired("#password"),
     Validator.isPassword("#password"),
     Validator.minMaxLength("#password", 6, 10),
     Validator.isRequired("#chucvu"),
     Validator.isRequired("#gioLam"),
-    Validator.isNumber("#gioLam", 80, 200),
+    Validator.isNumber(
+      "#gioLam",
+      80,
+      200,
+      "Vui lòng nhập giờ trong khoảng từ 80 giờ đến 200 giờ"
+    ),
   ],
   // PHƯƠNG THỨC THÊM NHÂN VIÊN
   onSubmit: function (employee) {
